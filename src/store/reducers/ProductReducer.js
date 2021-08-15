@@ -20,15 +20,24 @@ const initialState = {
         { id: 8, name: 'male jacket for winter', image: eight, price: 80, discount: 7, discountPrice: 80 - 7 / 100 * 80, quantity: 1, desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo aspernatur, quo nostrum natus dolor obcaecati reprehenderit reiciendis, repellat omnis voluptates et, dolorem maxime iure sapiente laboriosam quia! Aliquam, vel soluta?" },
         { id: 9, name: 'male jacket for all season', image: nine, price: 95, discount: 4, discountPrice: 95 - 4 / 100 * 95, quantity: 1, desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo aspernatur, quo nostrum natus dolor obcaecati reprehenderit reiciendis, repellat omnis voluptates et, dolorem maxime iure sapiente laboriosam quia! Aliquam, vel soluta?" },
         { id: 10, name: 'male winter jacket', image: ten, price: 120, discount: 3, discountPrice: 120 - 3 / 100 * 120, quantity: 1, desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo aspernatur, quo nostrum natus dolor obcaecati reprehenderit reiciendis, repellat omnis voluptates et, dolorem maxime iure sapiente laboriosam quia! Aliquam, vel soluta?" },
-    ]
+    ],
+    product:{}
 }
 
 const productReducer = (state = initialState, { type, payload }) => {
     switch (type) {
 
-        case "typeName":
-            return { ...state, ...payload }
+        case "singleProduct":
+            if (Number(payload) === -1) {
+               let product={}
+               return { ...state, product }
+            }
+            else{
+                 let product = state.products.find((prod,index)=>prod.id === Number(payload) )
+                 return { ...state, product }
 
+            }
+           break;
         default:
             return state
     }

@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Home from './views/Home/Home';
 import Cart from './components/Cart/Cart';
+import ProductDetails from './views/ProductDetails/ProductDetails';
 
 function App() {
   return (
@@ -20,6 +21,12 @@ function App() {
           </Route>
           <Route exact path="/cart">
               <Cart></Cart>
+          </Route>
+          <Route exact path="/product/details/:id">
+              <ProductDetails></ProductDetails>
+          </Route>
+          <Route  path="*">
+             not found
           </Route>
         </Switch>
       </Router>

@@ -5,15 +5,15 @@ import { Link } from 'react-router-dom';
 const Nav = () => {
     return (
         <>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light nav-sticky">
-                <div class="container">
-                    <Link class="navbar-brand" to="/">
+            <nav className="navbar navbar-expand-lg navbar-light bg-light nav-sticky">
+                <div className="container">
+                    <Link className="navbar-brand" to="/">
                         <img src={logo} alt="" className="img-fluid" style={{ width: "100%", height: "60px" }} />
                     </Link>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <div className="ms-auto">
                             <div className="">
 
